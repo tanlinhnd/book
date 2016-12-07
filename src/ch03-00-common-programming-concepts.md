@@ -1,24 +1,13 @@
-# Common Programming Concepts
+# Các khái niệm cơ bản
 
-This chapter covers concepts that appear in almost every programming language
-and how they work in Rust. Many programming languages have much in common at
-their core. None of the concepts presented in this chapter are unique to Rust,
-but we’ll discuss them in the context of Rust and explain their conventions.
+Chương này trình bày các khái niệm cơ bản xuất hiện ở hầu hết các ngôn ngữ lập trình và làm thế nào sử dụng chúng trong Rust. Nhiều ngôn ngữ lập trình có phần lõi giống nhau. Không có khái niệm nào trong chương này chỉ dành riêng cho Rust, tuy nhiên chúng ta sẽ thảo luận và giải thích các khái niệm trong ngữ cảnh của Rust.
 
-Specifically, you’ll learn about variables, basic types, functions, comments,
-and control flow. These foundations will be in every Rust program, and learning
-them early will give you a strong core to start from.
+Cụ thể, bạn sẽ được học về biến, kiểu dữ liệu cơ bản, hàm, cách chú thích và cấu trúc điều khiển. Những khái niệm cơ bản này xuất hiện trong mọi chương trình Rust, nắm vững chúng sẽ giúp bạn có một nền tảng vững chắc ngay từ đầu.
 
 <!-- PROD: START BOX -->
 
-> ### Keywords
+> ### Từ khóa
 >
-> The Rust language has a set of *keywords* that have been reserved for use by
-> the language only, much like other languages do. Keep in mind that you cannot
-> use these words as names of variables or functions. Most of the keywords have
-> special meanings, and you’ll be using them to do various tasks in your Rust
-> programs; a few have no current functionality associated with them but have
-> been reserved for functionality that might be added to Rust in the future. You
-> can find a list of the keywords in Appendix A.
+> Rust có danh sách các *keywords* chỉ được sử dụng bởi chính nó, giống như cách những ngôn ngữ lập trình khác vẫn làm. Bạn không thể sử dụng những từ khóa này để đặt tên biến hoặc tên hàm. Đa số từ khóa đều có ý nghĩa đặc biệt và được sử dụng trong những tác vụ cụ thể trong một chương trình Rust. Một số từ khóa chưa sử dụng tại thời điểm hiện tại nhưng được dành cho các chức năng được thêm vào Rust trong tương lai. Xem thêm danh sách các từ khóa tại Phụ lục A
 
 <!-- PROD: END BOX -->
