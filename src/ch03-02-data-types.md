@@ -1,24 +1,15 @@
-## Data Types
+## Kiểu dữ liệu
 
-Every value in Rust is of a certain *type*, which tells Rust what kind of data
-is being specified so it knows how to work with that data. In this section,
-we’ll look at a number of types that are built into the language. We split the
-types into two subsets: scalar and compound.
+Mỗi giá trị trong Rust đều có một *kiểu* nhất định, điều đó cho phép Rust 
+biết được loại dữ liệu được đã quy định để có hành xử đúng. Trong phần này, chúng ta xem xét một số kiểu dữ liệu có sẵn, được chia làm loại: vô hướng (scalar) và phức hợp (compound).
 
-Throughout this section, keep in mind that Rust is a *statically typed*
-language, which means that it must know the types of all variables at compile
-time. The compiler can usually infer what type we want to use based on the
-value and how we use it. In cases when many types are possible, such as when we
-converted a `String` to a numeric type using `parse` in Chapter 2, we must add
-a type annotation, like this:
+Xuyên suốt phần này, hãy ghi nhớ rằng Rust là ngôn ngữ *kiểu tĩnh*, điều đó có nghĩa rằng Rust phải biết kiểu dữ liệu của tất cả các biến tại thời điểm biên dịch. Với từng giá trị cụ thể, trình biên dịch có thể suy ra kiểu dữ liệu chúng ta sử dụng và cách chúng ta sử dụng chúng. Trong trường hợp có nhiều kiểu dữ liệu khả dụng, ví dụ như khi chuyển đổi kiểu `String` sang kiểu số học sử dụng `parse` trong Chương 2, chúng ta phải thêm một chú thích kiểu như sau:
 
 ```rust
 let guess: u32 = "42".parse().unwrap();
 ```
 
-If we don’t add the type annotation here, Rust will display the following
-error, which means the compiler needs more information from us to know which
-possible type we want to use:
+Nếu bạn không thêm chú thích kiểu ở đây, Rust sẽ hiển thị một thông báo lỗi, có nghĩa rằng trình biên dịch cần nhiều thông tin hơn để hiểu được kiểu dữ liệu mà chúng ta muốn sử dụng:
 
 ```text
 error[E0282]: unable to infer enough type information about `_`
@@ -30,32 +21,24 @@ error[E0282]: unable to infer enough type information about `_`
   = note: type annotations or generic parameter binding required
 ```
 
-You’ll see different type annotations as we discuss the various data types.
+Bạn sẽ thấy các chú thích kiểu khác nhau khi chúng ta thảo luận về các kiểu dữ liệu khác nhau.
 
-### Scalar Types
+### Kiểu vô hướng
 
-A *scalar* type represents a single value. Rust has four primary scalar types:
-integers, floating-point numbers, booleans, and characters. You’ll likely
-recognize these from other programming languages, but let’s jump into how they
-work in Rust.
+Kiểu vô hướng hay *scalar* là kiểu dữ liệu đại diện cho một giá trị duy nhất. Rust có bốn kiểu vô hướng chính: số nguyên, số thập phân, luận lý, và ký tự. Bạn có thể sẽ nhận ra chúng ở những ngôn ngữ lập trình khác, nhưng chúng ta hãy xem xét cách chúng làm việc trong Rust.
 
-#### Integer Types
+#### Kiểu số nguyên
 
-An *integer* is a number without a fractional component. We used one integer
-type earlier in this chapter, the `i32` type. This type declaration indicates
-that the value it’s associated with should be a signed integer (hence the `i`,
-as opposed to a `u` for unsigned) for a 32-bit system. Table 3-1 shows the
-built-in integer types in Rust. Each variant in the Signed and Unsigned columns
-(for example, *i32*) can be used to declare the type of an integer value.
+Kiểu *số nguyên* là một số không có phần phân đoạn. Chúng ta đã sử dụng một kiểu số nguyên ở phần trước, đó là kiểu `i32`. Khai báo kiểu này chỉ ra rằng giá trị của nó là một số nguyên có dấu (ở đây là `i`, và ngược lại là `u` tức không dấu) cho hệ 32-bit. Bảng 3-1 cho thấy các loại số nguyên tích hợp sẵn trong Rust. Mỗi biến thể trong các cột Signed và Unsigned (ví dụ *i32*) có thể được sử dụng để khai báo kiểu dữ liệu cho một giá trị số nguyên.
 
 <figure>
 <figcaption>
 
-Table 3-1: Integer Types in Rust
+Table 3-1: Kiểu số nguyên trong Rust
 
 </figcaption>
 
-| Length | Signed | Unsigned |
+| Độ dài | Signed | Unsigned |
 |--------|--------|----------|
 | 8-bit  | i8     | u8       |
 | 16-bit | i16    | u16      |
